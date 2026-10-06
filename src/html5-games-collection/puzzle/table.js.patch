@@ -1,0 +1,21 @@
+--- source/Table.js	2026-10-06 19:21:27.942350286 +0200
++++ modified/Table.js	2026-10-06 17:48:18.673235215 +0200
+@@ -62,6 +62,18 @@
+     }
+ 
+     /**
++     * Clears the Table pieces, sets, and their saved state
++     * @returns {Void}
++     */
++    clear() {
++        this.#sets.forEach((set) => set.destroy());
++        this.#pieces.empty();
++        this.#sets.empty();
++        this.savePieces();
++        this.saveSets();
++    }
++
++    /**
+      * Returns the Table scroll
+      * @return {{top: Number, left: Number}}
+      */

@@ -1,0 +1,6 @@
+# path	url	sha256	patch
+media.alienwarearena.com/html5_games/puzzle/source/Board.js	https://media.alienwarearena.com/html5_games/puzzle/source/Board.js	4e1ba2b4bce9c82bfbe76f35aa4b99a3e66cfcb72297b1d215c4077cc42d29c1	board.patch
+media.alienwarearena.com/html5_games/puzzle/source/Instance.js	https://media.alienwarearena.com/html5_games/puzzle/source/Instance.js	bc2694b237c9d1f159cb14276620bcec73beb71cb84710d7282d0cafb23e3234	instance.patch
+media.alienwarearena.com/html5_games/puzzle/source/Main.js	https://media.alienwarearena.com/html5_games/puzzle/source/Main.js	b45a115808e355621b950035089085917deeb5adfb045d936540227929caf445	main.patch
+media.alienwarearena.com/html5_games/puzzle/source/Puzzle.js	https://media.alienwarearena.com/html5_games/puzzle/source/Puzzle.js	7de89da073a3a1fa6a912885b25fb1f2aebc2ce0e581eb5efd54e0034815552a	puzzle.patch
+media.alienwarearena.com/html5_games/puzzle/source/Table.js	https://media.alienwarearena.com/html5_games/puzzle/source/Table.js	7d8d92a9851965782599c2f271ac9d81ee1feadd2c4109c6868c7dc92302d3bc	table.js.patch

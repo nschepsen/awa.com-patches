@@ -1,0 +1,26 @@
+--- source/Puzzle.js	2026-10-06 19:21:16.564855222 +0200
++++ modified/Puzzle.js	2026-10-06 17:58:17.639270073 +0200
+@@ -185,7 +185,22 @@
+         this.#drawer.toggleSplit();
+     }
+ 
+-
++    /**
++     * Adds remaining pieces to the board and completes the puzzle
++     * @returns {Void}
++     */
++    autocomplete() {
++        if (!this.#board || this.#display === "congrats") {
++            return;
++        }
++    
++        this.#previewElem.style.display = "none";
++        this.#pauseElem.style.display   = "none";
++        this.#display = "game";
++        this.#board.addRemainingPieces(this.#instance.getAllPieces());
++        this.#table.clear();
++        this.complete();
++    }
+ 
+     /**
+      * Finds a Piece or Set in the Drawer or Table to pick

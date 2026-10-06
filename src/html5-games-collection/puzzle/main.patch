@@ -1,0 +1,18 @@
+--- source/Main.js	2026-10-06 19:21:04.488567904 +0200
++++ modified/Main.js	2026-10-06 17:50:11.416877861 +0200
+@@ -61,6 +61,7 @@
+     const mute    = () => sounds.toggle();
+     const borders = () => { if (puzzle) puzzle.toggleOnlyBorders(); };
+     const split   = () => { if (puzzle) puzzle.toggleDrawerSplit(); };
++    const autocomplete = () => { if (puzzle) puzzle.autocomplete(); };
+ 
+     shortcuts = {
+         V      : preview,
+@@ -71,6 +72,7 @@
+         A      : borders,
+         S      : split,
+         J      : split,
++        C      : autocomplete,
+     };
+ }
+ 

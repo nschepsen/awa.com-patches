@@ -1,0 +1,17 @@
+--- source/Instance.js	2026-10-06 19:20:40.386175581 +0200
++++ modified/Instance.js	2026-10-06 17:52:10.158777346 +0200
+@@ -167,6 +167,14 @@
+     }
+ 
+     /**
++     * Returns all puzzle pieces
++     * @returns {Piece[]}
++     */
++    getAllPieces() {
++        return Object.values(this.#pieces);
++    }
++
++    /**
+      * Saves the Pieces into the given Storage
+      * @param {String} name
+      * @param {List}   list

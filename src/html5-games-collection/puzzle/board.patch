@@ -1,0 +1,29 @@
+--- source/Board.js	2026-10-06 19:20:18.293519105 +0200
++++ modified/Board.js	2026-10-06 17:51:07.557862255 +0200
+@@ -139,4 +139,26 @@
+         }
+         this.#instance.saveBoardPieces(this.#list);
+     }
++    
++    /**
++     * Adds every piece that is not already on the Board
++     * @param {Piece[]} pieces
++     * @returns {Void}
++     */
++    addRemainingPieces(pieces) {
++        let added = false;
++        for (const piece of pieces) {
++            if (this.#matrix[piece.row][piece.col]) {
++                continue;
++            }
++
++            this.insertPiece(piece);
++            this.#metrics.incPlacedPiece();
++            this.#list.addLast(piece);
++            added = true;
++        }
++        if (added) {
++            this.#instance.saveBoardPieces(this.#list);
++        }
++    }
+ }
