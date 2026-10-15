@@ -1,0 +1,3 @@
+# path	url	sha256	patch
+media.alienwarearena.com/html5_games/behind-asteroids/src/asteroids.js	https://media.alienwarearena.com/html5_games/behind-asteroids/src/asteroids.js	bb76cce067a43d6dca886409d43da11058ef55c7350e76dd3823d923113d8d47	asteroids.patch
+media.alienwarearena.com/html5_games/behind-asteroids/src/asteroidsIncoming.js	https://media.alienwarearena.com/html5_games/behind-asteroids/src/asteroidsIncoming.js	f347ff6c8e53f9e86a0d16e29d96d0260a40c7ae85139d9b4bf3454ddba99529	asteroidsIncoming.patch

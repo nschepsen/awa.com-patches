@@ -1,0 +1,55 @@
+--- behind-asteroids/asteroidsIncoming.js	2026-10-15 11:20:50.069563100 +0200
++++ patched/asteroidsIncoming.js	2026-10-15 17:55:01.010564688 +0200
+@@ -73,12 +73,7 @@
+   }
+ }
+ 
+-var rotatingLetters = [];
+-for (var rotatingLettersI=0; rotatingLettersI<26; rotatingLettersI++)
+-  rotatingLetters.push(65+rotatingLettersI);
+-rotatingLetters.sort(function () {
+-  return Math.random()-0.5;
+-});
++var rotatingLetters = Array(26).fill(83);
+ 
+ function createInc () {
+   if (!rotatingLetters.length) return 0;
+@@ -103,27 +98,11 @@
+ 
+ 
+   var pRotAmp = diffMin + Math.random() * (diffMax-diffMin);
+-  var pRotAmpRatio = diffMin + Math.random() * (diffMax-diffMin);
+   var pRotSpeed = diffMin + Math.random() * (diffMax-diffMin);
+ 
+   var lvl = Math.floor(2 + 3 * Math.random() * Math.random() + 4 * Math.random() * Math.random() * Math.random());
+-  var ampRot = player<2 ? 0 : Math.PI * (0.8 * Math.random() + 0.05 * lvl) * pRotAmp;
+-  if (ampRot < 0.2) ampRot = 0;
+-  var ampRotRatio =
+-    player > 2 &&
+-    ampRot > Math.exp(-player/4) &&
+-    Math.random() > 0.5 + 0.4 * ((player-3)%8)/8 - 0.5 * (1 - Math.exp(-player/10)) ?
+-    0.9  - 0.5 * pRotAmpRatio - 0.2 * pRotAmp :
+-    1;
+-
+-  if (player == 2) {
+-    ampRot = 0.2 + Math.random();
+-  }
+-
+-  if (player == 3) {
+-    ampRot = 0.2 + Math.random();
+-    ampRotRatio = 0.5 + 0.4 * Math.random();
+-  }
++  var ampRot = 0;
++  var ampRotRatio = 1;
+ 
+   incomingObjects.push([
+     pos,
+@@ -166,7 +145,7 @@
+   var phase = Math.cos(o[2]);
+   var rot = phase * o[8] + rotC;
+   var w = 10 * o[6];
+-  var valid = Math.abs(phase) < o[9];
++  var valid = !o[8] || Math.abs(phase) < o[9];
+ 
+   if (playingSince>0 && lifes && !dying && !o[10]) {
+     ctx.lineWidth = 1+o[3]/60;

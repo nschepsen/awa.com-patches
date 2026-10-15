@@ -11,7 +11,15 @@
 
 #### HTML5 GAMES ####
 
+* Behind the Asteroids <sub>October 15th, 2026</sub>
+  
+  * The asteroid's velocity is increased by 10 times
+  * The rotation oscillation is disabled
+  * The random shoot key has been reduced to a single key. Press "**S**" to shoot with auto-aim.
+
 * Portal Puzzle <sub>October 6th, 2026</sub>
+
+  * Press "**C**" to auto-complete the puzzle
 
 #### ADVERTISING ####
 * Alienware M16 R2 <sub>April 6th, 2024</sub> [[Source](https://secure.cataboom.com/remote/awa-alienware-m16-r2-wt/assets/js/mechanic.js)]
